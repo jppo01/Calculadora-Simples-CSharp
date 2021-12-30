@@ -146,7 +146,7 @@ namespace Calculadora
 
             }
 
-            textResultado.Text = Convert.ToString(Resultado("N5"));
+            textResultado.Text = Convert.ToString(Resultado);
 
 
         }
