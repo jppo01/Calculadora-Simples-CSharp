@@ -8,18 +8,6 @@ namespace Calculadora
         {
             InitializeComponent();
         }
-       
-        private void button7_Click(object sender, EventArgs e)
-        {
-            if (textResultado.Text != "") //não deixar o usuario usar o botão sem ter um valor registrado
-            {
-                labelResultado.Text = "*";
-                Numero1 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
-                Operador = "multiplicacao";
-                textResultado.Text = null;
-            }
-
-        }
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -81,7 +69,7 @@ namespace Calculadora
             if (textResultado.Text != "") //não deixar o usuario usar o botão sem ter um valor registrado
             {
                 labelResultado.Text = "+";
-                Numero1 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
+                Numero1 = Numero1 + decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
                 Operador = "soma";
                 textResultado.Text = null;
             }
@@ -92,20 +80,51 @@ namespace Calculadora
             if (textResultado.Text != "") //não deixar o usuario usar o botão sem ter um valor registrado
             {
                 labelResultado.Text = "-";
-                Numero1 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
+                Numero1 = Numero1 - decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
                 Operador = "subtracao";
                 textResultado.Text = null;
             }
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (textResultado.Text != "") //não deixar o usuario usar o botão sem ter um valor registrado
+            {
+                if (Numero1 != 0)
+                {
+                    labelResultado.Text = "*";
+                    Numero1 = Numero1 * decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
+                    Operador = "multiplicacao";
+                    textResultado.Text = null;
+                }
+                else
+                {
+                    labelResultado.Text = "*";
+                    Numero1 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
+                    Operador = "multiplicacao";
+                    textResultado.Text = null;
+                }
+
+                }
+
+        }
         private void button16_Click(object sender, EventArgs e)
         {
             if (textResultado.Text != "") //não deixar o usuario usar o botão sem ter um valor registrado
             {
-                labelResultado.Text = "÷";
-                Numero1 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
-                Operador = "divisao";
-                textResultado.Text = null;
+                if (Numero1 != 0)
+                    {
+                        labelResultado.Text = "÷";
+                        Numero1 = Numero1 / decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
+                        Operador = "divisao";
+                        textResultado.Text = null;
+                    } else
+                {
+                        labelResultado.Text = "÷";
+                        Numero1 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
+                        Operador = "divisao";
+                        textResultado.Text = null;
+                }
             }
         }
 
@@ -141,12 +160,23 @@ namespace Calculadora
                     break;
 
                 case "divisao":
-                    Resultado = (Numero1 / Numero2);
+                    if (Numero2 == 0)
+                    {
+                        MessageBox.Show("Não se divide por Zero!");
+
+                    } else
+                    {
+                        Resultado = (Numero1 / Numero2);
+                    }
                     break;
 
             }
 
             textResultado.Text = Convert.ToString(Resultado);
+            labelResultado.Text = null;
+            Numero1 = 0;
+            Numero2 = 0;
+            Resultado = 0;
 
 
         }
