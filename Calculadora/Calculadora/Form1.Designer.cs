@@ -226,6 +226,7 @@
             this.Controls.Add(this.Creditos);
             this.Controls.Add(this.labelResultado);
             this.Controls.Add(this.textResultado);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Calculadora";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,0 +1,6 @@
+C:\Users\engel\Desktop\Calculadora\Calculadora.exe
+C:\Users\engel\Desktop\Calculadora\Calculadora.dll
+C:\Users\engel\Desktop\Calculadora\Calculadora.deps.json
+C:\Users\engel\Desktop\Calculadora\Calculadora.runtimeconfig.json
+C:\Users\engel\Desktop\Calculadora\Calculadora.pdb
+C:\Users\engel\Desktop\Calculadora\pt-BR\Calculadora.resources.dll
