@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\engel\\Documents\\GitHub\\Calculadora-Simples-CSharp-\\Calculadora\\Calculadora\\Calculadora.csproj",
+      "projectUniqueName": "C:\\Users\\engel\\Documents\\GitHub\\Calculadora-Simples-CSharp-\\Calculadora\\Calculadora.csproj",
       "projectName": "Calculadora",
-      "projectPath": "C:\\Users\\engel\\Documents\\GitHub\\Calculadora-Simples-CSharp-\\Calculadora\\Calculadora\\Calculadora.csproj",
+      "projectPath": "C:\\Users\\engel\\Documents\\GitHub\\Calculadora-Simples-CSharp-\\Calculadora\\Calculadora.csproj",
       "packagesPath": "C:\\Users\\engel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\engel\\Documents\\GitHub\\Calculadora-Simples-CSharp-\\Calculadora\\Calculadora\\obj\\",
+      "outputPath": "C:\\Users\\engel\\Documents\\GitHub\\Calculadora-Simples-CSharp-\\Calculadora\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
