@@ -9,6 +9,7 @@ namespace Calculadora
             InitializeComponent();
         }
 
+        //Determinação dos números aos botões
         private void button6_Click(object sender, EventArgs e)
         {
             textResultado.Text = textResultado.Text + "0";
@@ -63,6 +64,8 @@ namespace Calculadora
         {
             textResultado.Text = textResultado.Text + ".";
         }
+
+
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -140,11 +143,17 @@ namespace Calculadora
         {
             textResultado.Text = null;
         }
+
+        // botão =
         private void button11_Click(object sender, EventArgs e)
         {
-            Numero2 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
-            textResultado.Text = null;
+            if (textResultado.Text != "") // não deixa o usuário entrar na opção de igual sem informar valor
+            {
+                Numero2 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
+                textResultado.Text = "";
+            }
 
+            //identificando qual é o tipo de operação e realizando-a
             switch (Operador)
             {
                 case "soma":
@@ -169,11 +178,15 @@ namespace Calculadora
                         Resultado = (Numero1 / Numero2);
                     }
                     break;
+                // informa ao usuário que nenhum valor foi informado
+                default: 
+                    MessageBox.Show("Nenhum valor foi informado!");
+                    break;
 
             }
 
             textResultado.Text = Convert.ToString(Resultado);
-            labelResultado.Text = null;
+            labelResultado.Text = "";
             Numero1 = 0;
             Numero2 = 0;
             Resultado = 0;
