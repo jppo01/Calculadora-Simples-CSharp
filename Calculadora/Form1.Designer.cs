@@ -16,7 +16,8 @@
         decimal Numero1 = 0;
         decimal Numero2 = 0;
         decimal Resultado = 0;
-        string Operador = null;
+        string Operador = "";
+        string tecla = "";
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -179,6 +180,7 @@
             this.button15.Name = "button15";
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button15_KeyPress);
             // 
             // button16
             // 

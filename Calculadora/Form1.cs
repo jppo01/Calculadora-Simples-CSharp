@@ -15,14 +15,36 @@ namespace Calculadora
             textResultado.Text = textResultado.Text + "0";
         }
 
+        //---------------- Para o número 1 ----------------------------
+        //adiciona 1 a fila de textResultado se o botão for pressionado
         private void button15_Click(object sender, EventArgs e)
         {
             textResultado.Text = textResultado.Text + "1";
         }
+        // adicionar 1 na textResultado se o número 1 for pressionado no teclado
+        private void button15_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 1)
+            {
+                MessageBox.Show("pressionou 1");
+                textResultado.Text = textResultado.Text + 1;
+            }
+        }
 
+        //--------------- Para o número 2 -------------------------
+        //adiciona 1 a fila de textResultado se o botão for pressionado
         private void button14_Click(object sender, EventArgs e)
         {
             textResultado.Text = textResultado.Text + "2";
+        }
+        // adicionar 1 na textResultado se o número 1 for pressionado no teclado
+        private void button14_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            tecla = e.KeyChar.ToString();
+            if (tecla == "2")
+            {
+                textResultado.Text = textResultado.Text + 2;
+            }
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -193,7 +215,6 @@ namespace Calculadora
 
 
         }
-
 
     }
 }
